@@ -10,9 +10,6 @@ const LogOut = () => {
   };
 
   return (
-    // <button classNameName={css.logOut} type="button" onClick={handleLogOut}>
-    //   LogOut
-    // </button>
     <div className={css.btnWrap}>
       <button className={css.Btn} type="button" onClick={handleLogOut}>
         <div className={css.sign}>

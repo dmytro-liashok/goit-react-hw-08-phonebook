@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectorUserData } from 'redux/authReducer';
 import css from './HomePage.module.css';

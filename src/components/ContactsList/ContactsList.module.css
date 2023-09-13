@@ -19,11 +19,15 @@ li {
 .itemContact {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: 15px;
 }
 
 .itemContact:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.btnWrap {
+  width: 40px;
 }
 
 /* button */
@@ -87,4 +91,10 @@ li {
   opacity: 1;
   transform: translateY(0px);
   transition-duration: 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .contactName {
+    width: 100%;
+  }
 }

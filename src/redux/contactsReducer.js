@@ -5,6 +5,7 @@ import {
 } from '@reduxjs/toolkit';
 import { instance } from 'services/baseAPI';
 import { selectorFilter } from './filterReduce';
+import { toast } from 'react-toastify';
 
 export const getAllContacts = createAsyncThunk(
   'contact/getAllContacts',
@@ -13,6 +14,7 @@ export const getAllContacts = createAsyncThunk(
       const { data } = await instance.get('/contacts');
       return data;
     } catch (error) {
+      toast.error('Oops! Something went wrong! Please try again!');
       return thunkApi.rejectWithValue(error.message);
     }
   }
@@ -25,6 +27,7 @@ export const addContact = createAsyncThunk(
       const { data } = await instance.post('/contacts', newContact);
       return data;
     } catch (error) {
+      toast.error('Oops! Something went wrong! Please try again!');
       return thunkApi.rejectWithValue(error.message);
     }
   }
@@ -37,6 +40,7 @@ export const deleteContact = createAsyncThunk(
       const { data } = await instance.delete(`/contacts/${contactId}`);
       return data;
     } catch (error) {
+      toast.error('Oops! Something went wrong! Please try again!');
       return thunkApi.rejectWithValue(error.message);
     }
   }

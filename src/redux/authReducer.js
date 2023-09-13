@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { instance, token } from 'services/baseAPI';
+import { toast } from 'react-toastify';
 
 export const signUpUser = createAsyncThunk(
   'auth/signUpUser',
@@ -9,6 +10,7 @@ export const signUpUser = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
+      toast.error('Oops! Something went wrong! Please try again!');
       return thunkApi.rejectWithValue(error.message);
     }
   }
@@ -22,6 +24,7 @@ export const logInUser = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
+      toast.error('Oops! Something went wrong! Please try again!');
       return thunkApi.rejectWithValue(error.message);
     }
   }
@@ -35,6 +38,7 @@ export const logOutUser = createAsyncThunk(
       token.clear();
       return data;
     } catch (error) {
+      toast.error('Oops! Something went wrong! Please try again!');
       return thunkApi.rejectWithValue(error.message);
     }
   }
@@ -50,6 +54,7 @@ export const refreshUser = createAsyncThunk(
       const { data } = await instance.get('users/current');
       return data;
     } catch (error) {
+      toast.error('Oops! Something went wrong! Please try again!');
       return thunkApi.rejectWithValue(error.message);
     }
   },

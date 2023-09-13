@@ -1,7 +1,7 @@
-import React from 'react';
+import css from './NotFound.module.css';
 
 const NotFound = () => {
-  return <div>NotFound</div>;
+  return <div className={css.notFound}></div>;
 };
 
 export default NotFound;

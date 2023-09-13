@@ -1,7 +1,10 @@
-import ContactFilter from 'components/ContactFilter/ContactFilter';
-import ContactsForm from 'components/ContactForm/ContactsForm';
-import ContactsList from 'components/ContactsList/ContactsList';
-import css from "./ContactsPage.module.css"
+import css from './ContactsPage.module.css';
+import { lazy } from 'react';
+const ContactFilter = lazy(() =>
+  import('components/ContactFilter/ContactFilter')
+);
+const ContactsForm = lazy(() => import('components/ContactForm/ContactsForm'));
+const ContactsList = lazy(() => import('components/ContactsList/ContactsList'));
 
 const ContactsPage = () => {
   return (
