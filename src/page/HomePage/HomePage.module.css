@@ -1,0 +1,52 @@
+.homePage {
+  position: relative;
+  height: 40vh;
+  /* display: flex;
+  flex-direction: column; */
+  /* align-items: flex-end; */
+  padding: 150px 25px;
+  overflow: hidden;
+}
+
+.homePage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      rgba(30, 34, 90, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../../img/phonebook-bgr-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.homePageTitle {
+  max-width: 450px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: start;
+  margin-left: auto;
+}
+.homePageUserName {
+  color: #1d1f2c;
+}
+.homePageDescription {
+  color: #fff;
+  max-width: 450px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .homePageDescription {
+    font-size: 22px;
+  }
+}

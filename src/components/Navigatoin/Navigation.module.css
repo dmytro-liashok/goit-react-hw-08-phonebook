@@ -1,0 +1,12 @@
+.navItem {
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 65px;
+  height: auto;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.navItem:hover {
+  box-shadow: 0 0 5px #514663, 0 0 25px #514663, 0 0 50px #514663,
+    0 0 100px #514663;
+}
